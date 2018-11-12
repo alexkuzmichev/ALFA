@@ -37,6 +37,9 @@ public class ScreensManager : MonoBehaviour
     [SerializeField]
     private BadgeTrackableEventHandler badgeTrackableEventHandler;
 
+    [SerializeField]
+    private Sound_Manager soundManager;
+
     State state = State.None;// LoadingScreen;
     private Dictionary<State, CanvasGroup> stateCanvases = new Dictionary<State, CanvasGroup>();
 
@@ -75,6 +78,7 @@ public class ScreensManager : MonoBehaviour
     private void StartPlayingMainSound()
     {
         Debug.Log("TODO play main sound");
+        soundManager.main_sound_play();
         SetState(State.PlayingAdventure);
         StartCoroutine(WaitForSoundEvent(2));
     }
