@@ -1,0 +1,23 @@
+fileFormatVersion: 2
+guid: 8718be552b9c33f45a1f04d9aa89f420
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: Minsk
+  fontNames:
+  - Minsk
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: 75cc9a7192fd95844a9121ed45319f11, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
