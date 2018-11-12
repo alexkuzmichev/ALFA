@@ -14,7 +14,8 @@ public class ScreensManager : MonoBehaviour
         SelectAdventure,
         StartAdventure,
         PlayingAdventure,
-        TrackBadge
+        TrackBadge,
+        TrackPoster
     }
     [SerializeField]
     private CanvasGroup loadingScreenCanvas;
@@ -36,6 +37,8 @@ public class ScreensManager : MonoBehaviour
 
     [SerializeField]
     private BadgeTrackableEventHandler badgeTrackableEventHandler;
+    [SerializeField]
+    private BadgeTrackableEventHandler posterTrackableEventHandler;
 
     [SerializeField]
     private Sound_Manager soundManager;
@@ -43,14 +46,14 @@ public class ScreensManager : MonoBehaviour
     State state = State.None;// LoadingScreen;
     private Dictionary<State, CanvasGroup> stateCanvases = new Dictionary<State, CanvasGroup>();
 
-	void Start ()
+    void Start()
     {
         stateCanvases.Add(State.LoadingScreen, loadingScreenCanvas);
         stateCanvases.Add(State.SelectAdventure, selectAdventureCanvas);
         stateCanvases.Add(State.StartAdventure, startAdventureScreenCanvas);
         stateCanvases.Add(State.PlayingAdventure, playingAdventureScreenCanvas);
         stateCanvases.Add(State.TrackBadge, trackBadgeCanvas);
-        
+
         selectCosmosHackAdventureButton.onClick.AddListener(SelectCosmosHackAdventure);
         startCosmosHackAdventureButton.onClick.AddListener(StartCosmosHackAdventure);
         backToSelectAdventureScreenCanvasButton.onClick.AddListener(SetSelectAdventureCanvasState);
@@ -58,6 +61,7 @@ public class ScreensManager : MonoBehaviour
         HideCanvases();
         SetState(State.LoadingScreen);
         badgeTrackableEventHandler.OnTrackingFoundAction += StartBadgeSound;
+        posterTrackableEventHandler.OnTrackingFoundAction += StartPosterSound;
     }
 
     private void SetSelectAdventureCanvasState()
@@ -149,13 +153,23 @@ public class ScreensManager : MonoBehaviour
 
     private void StartBadgeTracking()
     {
-        
+
         //VuforiaBehaviour.Instance.enabled = true;
     }
 
     private void StartBadgeSound()
     {
         soundManager.main_sound_stop();
+        soundManager.poster_sound_stop();
         soundManager.badge_sound_play();
     }
+
+    private void StartPosterSound()
+    {
+        soundManager.main_sound_stop();
+        soundManager.badge_sound_stop();
+        soundManager.poster_sound_play();
+    }
+
+
 }
