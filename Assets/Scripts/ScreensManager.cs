@@ -120,7 +120,7 @@ public class ScreensManager : MonoBehaviour
             case State.None:
                 break;
             case State.LoadingScreen:
-                StartCoroutine(WaitForLoadingAnimation(1));
+                StartCoroutine(WaitForLoadingAnimation(10));
                 break;
             case State.SelectAdventure:
                 break;
