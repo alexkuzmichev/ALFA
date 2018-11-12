@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <QCARConfig xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="qcar_config.xsd">
   <Tracking>
+    <ImageTarget name="USSRPoster" size="0.297000 0.556824" />
     <ImageTarget name="ALFACosmoshack" size="0.090000 0.115313" />
   </Tracking>
 </QCARConfig>

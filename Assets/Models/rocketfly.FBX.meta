@@ -1,0 +1,285 @@
+fileFormatVersion: 2
+guid: 806961b5999aeb94fadcf5076271f364
+ModelImporter:
+  serializedVersion: 23
+  fileIDToRecycleName:
+    100000: Cylinder001
+    100002: Cylinder002
+    100004: Cylinder003
+    100006: Cylinder004
+    100008: Cylinder005
+    100010: Cylinder006
+    100012: Cylinder007
+    100014: Cylinder008
+    100016: Group001
+    100018: Group002
+    100020: Group003
+    100022: Group004
+    100024: Group005
+    100026: Line001
+    100028: Line002
+    100030: Line003
+    100032: Line004
+    100034: Line005
+    100036: Line006
+    100038: Line007
+    100040: Line008
+    100042: Line009
+    100044: Line010
+    100046: Line011
+    100048: Line012
+    100050: Line013
+    100052: Line014
+    100054: Line015
+    100056: Line016
+    100058: Line017
+    100060: Line018
+    100062: Line019
+    100064: Line020
+    100066: Line021
+    100068: Line022
+    100070: Line023
+    100072: Line024
+    100074: Line025
+    100076: Plane001
+    100078: Plane002
+    100080: //RootNode
+    100082: Sphere001
+    400000: Cylinder001
+    400002: Cylinder002
+    400004: Cylinder003
+    400006: Cylinder004
+    400008: Cylinder005
+    400010: Cylinder006
+    400012: Cylinder007
+    400014: Cylinder008
+    400016: Group001
+    400018: Group002
+    400020: Group003
+    400022: Group004
+    400024: Group005
+    400026: Line001
+    400028: Line002
+    400030: Line003
+    400032: Line004
+    400034: Line005
+    400036: Line006
+    400038: Line007
+    400040: Line008
+    400042: Line009
+    400044: Line010
+    400046: Line011
+    400048: Line012
+    400050: Line013
+    400052: Line014
+    400054: Line015
+    400056: Line016
+    400058: Line017
+    400060: Line018
+    400062: Line019
+    400064: Line020
+    400066: Line021
+    400068: Line022
+    400070: Line023
+    400072: Line024
+    400074: Line025
+    400076: Plane001
+    400078: Plane002
+    400080: //RootNode
+    400082: Sphere001
+    2100000: 'Material #25'
+    2100002: 'Material #28'
+    2100004: 'Material #27'
+    2100006: 'Material #26'
+    2100008: No Name
+    2100010: 'Material #29'
+    2100012: 'Material #30'
+    2100014: 'Material #31'
+    2300000: Cylinder001
+    2300002: Cylinder002
+    2300004: Cylinder003
+    2300006: Cylinder004
+    2300008: Cylinder005
+    2300010: Cylinder006
+    2300012: Cylinder007
+    2300014: Cylinder008
+    2300016: Line001
+    2300018: Line002
+    2300020: Line003
+    2300022: Line004
+    2300024: Line005
+    2300026: Line007
+    2300028: Line008
+    2300030: Line009
+    2300032: Line010
+    2300034: Line011
+    2300036: Line012
+    2300038: Line013
+    2300040: Line014
+    2300042: Line015
+    2300044: Line016
+    2300046: Line017
+    2300048: Line018
+    2300050: Line019
+    2300052: Line020
+    2300054: Line021
+    2300056: Line022
+    2300058: Line023
+    2300060: Line024
+    2300062: Line025
+    2300064: Plane001
+    2300066: Plane002
+    2300068: Sphere001
+    3300000: Cylinder001
+    3300002: Cylinder002
+    3300004: Cylinder003
+    3300006: Cylinder004
+    3300008: Cylinder005
+    3300010: Cylinder006
+    3300012: Cylinder007
+    3300014: Cylinder008
+    3300016: Line001
+    3300018: Line002
+    3300020: Line003
+    3300022: Line004
+    3300024: Line005
+    3300026: Line007
+    3300028: Line008
+    3300030: Line009
+    3300032: Line010
+    3300034: Line011
+    3300036: Line012
+    3300038: Line013
+    3300040: Line014
+    3300042: Line015
+    3300044: Line016
+    3300046: Line017
+    3300048: Line018
+    3300050: Line019
+    3300052: Line020
+    3300054: Line021
+    3300056: Line022
+    3300058: Line023
+    3300060: Line024
+    3300062: Line025
+    3300064: Plane001
+    3300066: Plane002
+    3300068: Sphere001
+    4300000: Plane001
+    4300002: Line001
+    4300004: Line002
+    4300006: Line004
+    4300008: Line005
+    4300010: Line003
+    4300012: Line007
+    4300014: Cylinder007
+    4300016: Cylinder008
+    4300018: Line022
+    4300020: Line020
+    4300022: Line021
+    4300024: Line023
+    4300026: Line024
+    4300028: Line025
+    4300030: Line019
+    4300032: Cylinder006
+    4300034: Cylinder003
+    4300036: Cylinder004
+    4300038: Cylinder005
+    4300040: Line017
+    4300042: Line016
+    4300044: Line018
+    4300046: Cylinder001
+    4300048: Cylinder002
+    4300050: Line014
+    4300052: Line015
+    4300054: Line013
+    4300056: Line012
+    4300058: Line011
+    4300060: Sphere001
+    4300062: Line009
+    4300064: Line010
+    4300066: Line008
+    4300068: Plane002
+  externalObjects: {}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    previousCalculatedGlobalScale: 1
+    hasPreviousCalculatedGlobalScale: 0
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

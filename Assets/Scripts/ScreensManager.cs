@@ -31,6 +31,8 @@ public class ScreensManager : MonoBehaviour
     private Button selectCosmosHackAdventureButton;
     [SerializeField]
     private Button startCosmosHackAdventureButton;
+    [SerializeField]
+    private Button startAgainGameButton;
 
     [SerializeField]
     private Button backToSelectAdventureScreenCanvasButton;
@@ -57,11 +59,20 @@ public class ScreensManager : MonoBehaviour
         selectCosmosHackAdventureButton.onClick.AddListener(SelectCosmosHackAdventure);
         startCosmosHackAdventureButton.onClick.AddListener(StartCosmosHackAdventure);
         backToSelectAdventureScreenCanvasButton.onClick.AddListener(SetSelectAdventureCanvasState);
+        startAgainGameButton.onClick.AddListener(SetLoginState);
 
         HideCanvases();
-        SetState(State.LoadingScreen);
+        SetLoginState();
         badgeTrackableEventHandler.OnTrackingFoundAction += StartBadgeSound;
         posterTrackableEventHandler.OnTrackingFoundAction += StartPosterSound;
+    }
+
+    private void SetLoginState()
+    {
+        soundManager.main_sound_stop();
+        soundManager.badge_sound_stop();
+        soundManager.poster_sound_stop();
+        SetState(State.LoadingScreen);
     }
 
     private void SetSelectAdventureCanvasState()
