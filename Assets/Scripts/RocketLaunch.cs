@@ -3,16 +3,24 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class RocketLaunch : MonoBehaviour {
+public class RocketLaunch : MonoBehaviour
+{
+    public float HorizontalSpeed;
+    public float VerticalSpeed;
+    public float Amplitude;
+    Vector3 tempPosition;
+    void Start()
+    {
+        tempPosition = transform.position;
+    }
 
-	// Use this for initialization
-	void Start () {
-       // DOTween dt = new DOTween();
-       // Tweener
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
+    // Update is called once per frame
+    void Update()
+    {
+        tempPosition.x += HorizontalSpeed;
+        tempPosition.y = Mathf.Sin(Time.realtimeSinceStartup * VerticalSpeed) * Amplitude;
+        transform.position = tempPosition;
+
+
+    }
 }

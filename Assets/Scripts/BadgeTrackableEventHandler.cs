@@ -7,6 +7,8 @@ public class BadgeTrackableEventHandler : DefaultTrackableEventHandler
 {
     [SerializeField]
     GameObject[] hideOnTrackingFound;
+    [SerializeField]
+    private AudioSource playOnTrackingFound;
     public event Action OnTrackingFoundAction;
 
     protected override void OnTrackingFound()
@@ -32,6 +34,11 @@ public class BadgeTrackableEventHandler : DefaultTrackableEventHandler
         if (OnTrackingFoundAction != null)
         {
             OnTrackingFoundAction();
+        }
+
+        if (playOnTrackingFound != null)
+        {
+            playOnTrackingFound.Play();
         }
     }
 
@@ -63,5 +70,10 @@ public class BadgeTrackableEventHandler : DefaultTrackableEventHandler
             component.enabled = false;
 
         OnTrackingFoundSetActive(true);
+
+        if (playOnTrackingFound != null)
+        {
+            playOnTrackingFound.Stop();
+        }
     }
 }

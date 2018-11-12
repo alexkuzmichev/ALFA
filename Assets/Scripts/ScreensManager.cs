@@ -80,7 +80,7 @@ public class ScreensManager : MonoBehaviour
         Debug.Log("TODO play main sound");
         soundManager.main_sound_play();
         SetState(State.PlayingAdventure);
-        StartCoroutine(WaitForSoundEvent(2));
+        StartCoroutine(WaitForSoundEvent(21));
     }
 
     private void HideCanvases()
@@ -120,7 +120,7 @@ public class ScreensManager : MonoBehaviour
             case State.None:
                 break;
             case State.LoadingScreen:
-                StartCoroutine(WaitForLoadingAnimation(10));
+                StartCoroutine(WaitForLoadingAnimation(5));
                 break;
             case State.SelectAdventure:
                 break;
@@ -143,7 +143,7 @@ public class ScreensManager : MonoBehaviour
 
     private IEnumerator WaitForSoundEvent(int soundEventTime)
     {
-        yield return new WaitForSeconds(soundEventTime);
+        yield return new WaitForSecondsRealtime(soundEventTime);
         SetState(State.TrackBadge);
     }
 
@@ -155,6 +155,7 @@ public class ScreensManager : MonoBehaviour
 
     private void StartBadgeSound()
     {
-        Debug.Log("TODO play badge sound");
+        soundManager.main_sound_stop();
+        soundManager.badge_sound_play();
     }
 }
