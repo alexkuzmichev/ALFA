@@ -34,7 +34,22 @@ ModelImporter:
     7400000: Rotate
     9500000: //RootNode
     2186277476908879412: ImportLogs
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 01 - Default
+    second: {fileID: 2100000, guid: fc5b55b0cdbf3b9419edd1902e813f3b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 'Material #25'
+    second: {fileID: 2100000, guid: 477923104b791ec458199753b750143b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 'Material #26'
+    second: {fileID: 2100000, guid: b3b17393db073694eaa260f572120bbe, type: 2}
   materials:
     importMaterials: 1
     materialName: 0

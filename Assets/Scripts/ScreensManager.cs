@@ -13,6 +13,7 @@ public class ScreensManager : MonoBehaviour
         LoadingScreen,
         SelectAdventure,
         StartAdventure,
+        PlayingAdventure,
         TrackBadge
     }
     [SerializeField]
@@ -22,11 +23,19 @@ public class ScreensManager : MonoBehaviour
     [SerializeField]
     private CanvasGroup startAdventureScreenCanvas;
     [SerializeField]
+    private CanvasGroup playingAdventureScreenCanvas;
+    [SerializeField]
     private CanvasGroup trackBadgeCanvas;
     [SerializeField]
     private Button selectCosmosHackAdventureButton;
     [SerializeField]
     private Button startCosmosHackAdventureButton;
+
+    [SerializeField]
+    private Button backToSelectAdventureScreenCanvasButton;
+
+    [SerializeField]
+    private BadgeTrackableEventHandler badgeTrackableEventHandler;
 
     State state = State.None;// LoadingScreen;
     private Dictionary<State, CanvasGroup> stateCanvases = new Dictionary<State, CanvasGroup>();
@@ -36,14 +45,21 @@ public class ScreensManager : MonoBehaviour
         stateCanvases.Add(State.LoadingScreen, loadingScreenCanvas);
         stateCanvases.Add(State.SelectAdventure, selectAdventureCanvas);
         stateCanvases.Add(State.StartAdventure, startAdventureScreenCanvas);
+        stateCanvases.Add(State.PlayingAdventure, playingAdventureScreenCanvas);
         stateCanvases.Add(State.TrackBadge, trackBadgeCanvas);
-
         
         selectCosmosHackAdventureButton.onClick.AddListener(SelectCosmosHackAdventure);
         startCosmosHackAdventureButton.onClick.AddListener(StartCosmosHackAdventure);
+        backToSelectAdventureScreenCanvasButton.onClick.AddListener(SetSelectAdventureCanvasState);
 
         HideCanvases();
-        SetState(State.LoadingScreen);        
+        SetState(State.LoadingScreen);
+        badgeTrackableEventHandler.OnTrackingFoundAction += StartBadgeSound;
+    }
+
+    private void SetSelectAdventureCanvasState()
+    {
+        SetState(State.SelectAdventure);
     }
 
     private void SelectCosmosHackAdventure()
@@ -59,7 +75,8 @@ public class ScreensManager : MonoBehaviour
     private void StartPlayingMainSound()
     {
         Debug.Log("TODO play main sound");
-        StartCoroutine(WaitForSoundEvent(1));
+        SetState(State.PlayingAdventure);
+        StartCoroutine(WaitForSoundEvent(2));
     }
 
     private void HideCanvases()
@@ -128,6 +145,12 @@ public class ScreensManager : MonoBehaviour
 
     private void StartBadgeTracking()
     {
+        
         //VuforiaBehaviour.Instance.enabled = true;
+    }
+
+    private void StartBadgeSound()
+    {
+        Debug.Log("TODO play badge sound");
     }
 }
