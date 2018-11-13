@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using Vuforia;
 
@@ -59,12 +60,17 @@ public class ScreensManager : MonoBehaviour
         selectCosmosHackAdventureButton.onClick.AddListener(SelectCosmosHackAdventure);
         startCosmosHackAdventureButton.onClick.AddListener(StartCosmosHackAdventure);
         backToSelectAdventureScreenCanvasButton.onClick.AddListener(SetSelectAdventureCanvasState);
-        startAgainGameButton.onClick.AddListener(SetLoginState);
+        startAgainGameButton.onClick.AddListener(Reload);
 
         HideCanvases();
         SetLoginState();
         badgeTrackableEventHandler.OnTrackingFoundAction += StartBadgeSound;
         posterTrackableEventHandler.OnTrackingFoundAction += StartPosterSound;
+    }
+
+    private void Reload()
+    {
+        SceneManager.LoadScene(0);
     }
 
     private void SetLoginState()
@@ -92,7 +98,6 @@ public class ScreensManager : MonoBehaviour
 
     private void StartPlayingMainSound()
     {
-        Debug.Log("TODO play main sound");
         soundManager.main_sound_play();
         SetState(State.PlayingAdventure);
         StartCoroutine(WaitForSoundEvent(21));
@@ -170,16 +175,22 @@ public class ScreensManager : MonoBehaviour
 
     private void StartBadgeSound()
     {
-        soundManager.main_sound_stop();
-        soundManager.poster_sound_stop();
-        soundManager.badge_sound_play();
+        if (state == State.TrackBadge)
+        {
+            soundManager.main_sound_stop();
+            soundManager.poster_sound_stop();
+            soundManager.badge_sound_play();
+        }
     }
 
     private void StartPosterSound()
     {
-        soundManager.main_sound_stop();
-        soundManager.badge_sound_stop();
-        soundManager.poster_sound_play();
+        if (state == State.TrackBadge)
+        {
+            soundManager.main_sound_stop();
+            soundManager.badge_sound_stop();
+            soundManager.poster_sound_play();
+        }
     }
 
 

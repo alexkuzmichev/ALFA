@@ -240,7 +240,7 @@ ModelImporter:
       name: fly
       takeName: fly
       firstFrame: 0
-      lastFrame: 100
+      lastFrame: 200
       wrapMode: 0
       orientationOffsetY: 0
       level: 0

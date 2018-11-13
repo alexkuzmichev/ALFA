@@ -250,6 +250,7 @@ GameObject:
   - component: {fileID: 222195362953328214}
   - component: {fileID: 114446056842148088}
   - component: {fileID: 225263607254741390}
+  - component: {fileID: 223019644434535886}
   m_Layer: 5
   m_Name: Panel Playing Cosmoshack
   m_TagString: Untagged
@@ -407,6 +408,7 @@ GameObject:
   - component: {fileID: 222288921304811948}
   - component: {fileID: 114862905277937110}
   - component: {fileID: 114819605039416166}
+  - component: {fileID: 95664632143493958}
   m_Layer: 5
   m_Name: Button
   m_TagString: Untagged
@@ -1202,6 +1204,24 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!95 &95664632143493958
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1514741486710168}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: cbe49ca1047991747ba4f32c5cb379d3, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!114 &114009943654425582
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1331,7 +1351,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.18262726, g: 0.2137876, b: 0.6792453, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 0.08235294}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -2166,9 +2186,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 37c67442e9f890e45bc39ed448e14acb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  HorizontalSpeed: 0.0001
-  VerticalSpeed: 0
-  Amplitude: 0
 --- !u!114 &114549244086055206
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2258,9 +2275,9 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: b99eec62bae1760418ac8e571719e10a, type: 3}
-  m_Type: 1
-  m_PreserveAspect: 1
+  m_Sprite: {fileID: 21300000, guid: 1f7f8f8a90604204a8d83859951152f6, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
   m_FillCenter: 0
   m_FillMethod: 4
   m_FillAmount: 1
@@ -2519,7 +2536,7 @@ MonoBehaviour:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
     m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
     m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
-    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_DisabledColor: {r: 1, g: 1, b: 1, a: 1}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
   m_SpriteState:
@@ -3083,6 +3100,26 @@ CanvasRenderer:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1572653214528532}
   m_CullTransparentMesh: 0
+--- !u!223 &223019644434535886
+Canvas:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1217504128436772}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_RenderMode: 2
+  m_Camera: {fileID: 0}
+  m_PlaneDistance: 100
+  m_PixelPerfect: 0
+  m_ReceivesEvents: 1
+  m_OverrideSorting: 1
+  m_OverridePixelPerfect: 0
+  m_SortingBucketNormalizedSize: 0
+  m_AdditionalShaderChannelsFlag: 0
+  m_SortingLayerID: 0
+  m_SortingOrder: 1
+  m_TargetDisplay: 0
 --- !u!223 &223953637566596760
 Canvas:
   m_ObjectHideFlags: 1
@@ -3211,7 +3248,7 @@ RectTransform:
   - {fileID: 224850678130712880}
   - {fileID: 224588393194145920}
   m_Father: {fileID: 224283520370434990}
-  m_RootOrder: 2
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -3267,7 +3304,7 @@ RectTransform:
   - {fileID: 224661187001233996}
   - {fileID: 224304201508856672}
   m_Father: {fileID: 224283520370434990}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -3286,10 +3323,10 @@ RectTransform:
   m_Children:
   - {fileID: 224571072178327040}
   - {fileID: 224035522590120912}
-  - {fileID: 224184722593338750}
   - {fileID: 224268130937876044}
   - {fileID: 224733783653415610}
   - {fileID: 224700961991493154}
+  - {fileID: 224184722593338750}
   - {fileID: 224972408282571226}
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -3673,7 +3710,7 @@ RectTransform:
   - {fileID: 224627057757991950}
   - {fileID: 224752504941090950}
   m_Father: {fileID: 224283520370434990}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -3732,7 +3769,7 @@ RectTransform:
   - {fileID: 224429966068044266}
   - {fileID: 224704543313931736}
   m_Father: {fileID: 224283520370434990}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -3752,10 +3789,10 @@ RectTransform:
   m_Father: {fileID: 224700961991493154}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 320, y: 420}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: -15}
+  m_SizeDelta: {x: -300, y: -410}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!224 &224758697832101740
 RectTransform:

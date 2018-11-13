@@ -3,27 +3,17 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class RocketLaunch : MonoBehaviour
-{
-    public float HorizontalSpeed;
-    public float VerticalSpeed;
-    public float Amplitude;
-    Vector3 tempPosition;
-    private Vector3 startPos;
+public class RocketLaunch : MonoBehaviour {
 
-    void Start()
-    {
-        startPos = transform.position;
-        tempPosition = transform.position;
+	// Use this for initialization
+	void Start () {
+        transform.DOMove(new Vector3(2, 2, 2), 2)
+   .SetEase(Ease.OutQuint)
+   .SetLoops(4);
     }
-
-    // Update is called once per frame
-    void Update()
-    {
-        tempPosition.x += HorizontalSpeed;
-        tempPosition.y = tempPosition.x * tempPosition.x;// Mathf.Sin(Time.realtimeSinceStartup * VerticalSpeed) * Amplitude;
-        transform.position = tempPosition - startPos;
-        Debug.Log(tempPosition);
-
-    }
+	
+	// Update is called once per frame
+	void Update () {
+		
+	}
 }
