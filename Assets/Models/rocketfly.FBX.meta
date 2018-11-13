@@ -45,6 +45,7 @@ ModelImporter:
     100078: Plane002
     100080: //RootNode
     100082: Sphere001
+    100084: Plane003
     400000: Cylinder001
     400002: Cylinder002
     400004: Cylinder003
@@ -87,6 +88,7 @@ ModelImporter:
     400078: Plane002
     400080: //RootNode
     400082: Sphere001
+    400084: Plane003
     2100000: 'Material #25'
     2100002: 'Material #28'
     2100004: 'Material #27'
@@ -95,6 +97,7 @@ ModelImporter:
     2100010: 'Material #29'
     2100012: 'Material #30'
     2100014: 'Material #31'
+    2100016: 'Material #32'
     2300000: Cylinder001
     2300002: Cylinder002
     2300004: Cylinder003
@@ -130,6 +133,7 @@ ModelImporter:
     2300064: Plane001
     2300066: Plane002
     2300068: Sphere001
+    2300070: Plane003
     3300000: Cylinder001
     3300002: Cylinder002
     3300004: Cylinder003
@@ -165,6 +169,7 @@ ModelImporter:
     3300064: Plane001
     3300066: Plane002
     3300068: Sphere001
+    3300070: Plane003
     4300000: Plane001
     4300002: Line001
     4300004: Line002
@@ -200,6 +205,9 @@ ModelImporter:
     4300064: Line010
     4300066: Line008
     4300068: Plane002
+    4300070: Plane003
+    7400000: fly
+    9500000: //RootNode
   externalObjects: {}
   materials:
     importMaterials: 1
@@ -220,18 +228,46 @@ ModelImporter:
     animationDoRetargetingWarnings: 0
     importAnimatedCustomProperties: 0
     importConstraints: 0
-    animationCompression: 1
+    animationCompression: 3
     animationRotationError: 0.5
     animationPositionError: 0.5
     animationScaleError: 0.5
     animationWrapMode: 0
     extraExposedTransformPaths: []
     extraUserProperties: []
-    clipAnimations: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: fly
+      takeName: fly
+      firstFrame: 0
+      lastFrame: 100
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
     isReadable: 1
   meshes:
     lODScreenPercentages: []
-    globalScale: 1
+    globalScale: 0.01
     meshCompression: 0
     addColliders: 0
     importVisibility: 1
@@ -251,8 +287,8 @@ ModelImporter:
     secondaryUVHardAngle: 88
     secondaryUVPackMargin: 4
     useFileScale: 1
-    previousCalculatedGlobalScale: 1
-    hasPreviousCalculatedGlobalScale: 0
+    previousCalculatedGlobalScale: 0.01
+    hasPreviousCalculatedGlobalScale: 1
   tangentSpace:
     normalSmoothAngle: 60
     normalImportMode: 0
@@ -274,10 +310,10 @@ ModelImporter:
     rootMotionBoneName: 
     rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
     hasTranslationDoF: 0
-    hasExtraRoot: 0
+    hasExtraRoot: 1
     skeletonHasParents: 1
   lastHumanDescriptionAvatarSource: {instanceID: 0}
-  animationType: 0
+  animationType: 2
   humanoidOversampling: 1
   additionalBone: 0
   userData: 
